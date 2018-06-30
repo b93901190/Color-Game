@@ -12,6 +12,12 @@ var modeButton = document.querySelectorAll(".mode");
 init();
 
 function init(){
+    setModeButtons();
+    setSquare();
+    reset();
+}
+
+function setModeButtons(){
     // set mode button
     for(var i = 0; i < modeButton.length; i++){
         modeButton[i].addEventListener("click", function(){
@@ -25,6 +31,9 @@ function init(){
     
         });
     }
+}
+
+function setSquare(){
     // set square
     for(var i = 0; i < squares.length; i++){        
         // add click listener
@@ -42,10 +51,7 @@ function init(){
             }
         });
     }
-
-    reset();
 }
-
 
 function reset(){
     //gen color
